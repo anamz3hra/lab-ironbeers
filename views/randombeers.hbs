@@ -1,0 +1,33 @@
+<div class="random-beers">
+<h1>Random Beers</h1>
+
+{{#each responseFromAPI}}
+
+
+<h2>{{ this.name }}</h2>
+<img src={{this.image_url}} >
+<p>{{description}}</p>
+<p>{{tagline}}</p>
+<p>{{food_pairing}}</p>
+<p>{{brewers_tips}}</p>
+
+{{/each}}
+
+</div>
+
+ {{!-- image, name, description, tagline, food pairing and brewer tips.  --}}
+
+    <a href="/godfather">
+        <img src="{{poster}}" alt="Poster for {{title}}">
+    </a>
+    <div class="movie-details">
+        <h3>{{title}} {{year}}</h3>
+        <p>Directed by: {{director}}</p>
+        <p>Duration: {{duration}}</p>
+        <p>Rating: {{rate}}</p>
+        <p>Genre: {{#each genre}}
+            <span>{{ this }}</span>
+            {{/each}}
+        </p>
+    </div>
+</div>
